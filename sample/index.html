@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app="musicApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    <script src="../soundslice.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div ng-controller="scoreController as score">
+      <p>This is a cool score:</p>
+      <p>
+        <score id="{{ score.id }}"></score>
+      </p>
+    </div>
+  </body>
+</html>
