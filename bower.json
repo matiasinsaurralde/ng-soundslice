@@ -1,0 +1,25 @@
+{
+  "name": "ng-soundslice",
+  "version": "0.0.0",
+  "homepage": "https://github.com/matiasinsaurralde/ng-soundslice",
+  "authors": [
+    "Matias Insaurralde <matias@insaurral.de>"
+  ],
+  "description": "Simple module to integrate Soundslice (interactive music scores) with AngularJS.",
+  "main": "soundslice.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "music",
+    "soundslice"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
