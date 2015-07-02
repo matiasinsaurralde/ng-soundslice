@@ -1,0 +1,27 @@
+{
+  "name": "ng-soundslice",
+  "version": "0.0.0",
+  "description": "",
+  "main": "soundslice.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matiasinsaurralde/ng-soundslice.git"
+  },
+  "keywords": [
+    "soundslice",
+    "music",
+    "notation"
+  ],
+  "author": "Matias Insaurralde <matias@insaurral.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matiasinsaurralde/ng-soundslice/issues"
+  },
+  "homepage": "https://github.com/matiasinsaurralde/ng-soundslice",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
