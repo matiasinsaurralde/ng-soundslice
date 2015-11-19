@@ -23,7 +23,7 @@ angular.module( 'soundslice', []).
 */
 
         attrs.$observe( 'id', function( v ) {
-          var html = '<iframe src="https://www.soundslice.com/scores/' + attrs.id + '/embed/" width="100%" height="500" frameBorder="0" allowfullscreen></iframe>';
+          var html = '<iframe id="soundslice-score" src="https://www.soundslice.com/scores/' + attrs.id + '/embed/" width="100%" height="500" frameBorder="0" allowfullscreen></iframe>';
           element.html( html );
         });
 
