@@ -22,8 +22,35 @@ angular.module( 'soundslice', []).
             fretboard = 1
 */
 
+        function rewriteAttr( name ) {
+          var newname = '';
+
+          name.split('').forEach( function( ch ) {
+            var lowercase_ch = ch.toLowerCase();
+            if( lowercase_ch != ch ) {
+              newname += '_';
+            };
+            newname += lowercase_ch;
+          });
+
+          return newname;
+
+        };
+
         attrs.$observe( 'id', function( v ) {
-          var html = '<iframe id="soundslice-score" src="https://www.soundslice.com/scores/' + attrs.id + '/embed/?show_track_names=0&show_staff=0&play_type=3&fretboard=1" width="100%" height="500" frameBorder="0" allowfullscreen></iframe>';
+          var attrs_body = '';
+console.log(12,attrs);
+
+          for( attr_key in attrs.$attr ) {
+            var value = attrs[ attr_key ],
+                attr = [ rewriteAttr(attr_key), value ].join( '=' );
+            attrs_body += '&' + attr;
+          };
+
+          attrs_body = attrs_body.slice( 1, attrs_body.length );
+
+          var html = '<iframe id="soundslice-score" src="https://www.soundslice.com/scores/' + attrs.id + '/embed/?' + attrs_body + '" width="100%" height="500" frameBorder="0" allowfullscreen></iframe>';
+console.log(1,html);
           element.html( html );
         });
 
