@@ -22,7 +22,7 @@ angular.module( 'soundslice', []).
             fretboard = 1
 */
 
-        function rewriteAttr( name ) {
+        function rewrite_attr( name ) {
           var newname = '';
 
           name.split('').forEach( function( ch ) {
@@ -42,7 +42,7 @@ angular.module( 'soundslice', []).
 
           for( attr_key in attrs.$attr ) {
             var value = attrs[ attr_key ],
-                attr = [ rewriteAttr(attr_key), value ].join( '=' );
+                attr = [ rewrite_attr(attr_key), value ].join( '=' );
             attrs_body += '&' + attr;
           };
 
