@@ -39,7 +39,6 @@ angular.module( 'soundslice', []).
 
         attrs.$observe( 'id', function( v ) {
           var attrs_body = '';
-console.log(12,attrs);
 
           for( attr_key in attrs.$attr ) {
             var value = attrs[ attr_key ],
@@ -50,7 +49,6 @@ console.log(12,attrs);
           attrs_body = attrs_body.slice( 1, attrs_body.length );
 
           var html = '<iframe id="soundslice-score" src="https://www.soundslice.com/scores/' + attrs.id + '/embed/?' + attrs_body + '" width="100%" height="500" frameBorder="0" allowfullscreen></iframe>';
-console.log(1,html);
           element.html( html );
         });
 
