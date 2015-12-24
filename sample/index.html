@@ -7,10 +7,15 @@
   </head>
   <body>
     <div ng-controller="scoreController as score">
-      <p>This is a cool score:</p>
+      <p>score 1:</p>
       <p>
-        <score id="{{ score.id }}"></score>
+        <score id="{{ score.id }}" show_staff="0" play_type="3" fretboard="1"></score>
       </p>
+      <p>score 2:</p>
+      <p>
+        <score id="{{ score.id }}" show_staff="0" play_type="3" show_tab="0"></score>
+      </p>
+
     </div>
   </body>
 </html>
