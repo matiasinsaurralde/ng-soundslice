@@ -16,3 +16,11 @@ This module provides a directive that looks like this:
 ```
 
 You may pass all the attributes supported by the [Player API](https://www.soundslice.com/help/player-api/).
+
+## TODO
+
+* Handle events
+
+## License
+
+[MIT](https://github.com/matiasinsaurralde/ng-soundslice/blob/master/LICENSE)
