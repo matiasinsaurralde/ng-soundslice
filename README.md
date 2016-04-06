@@ -19,7 +19,7 @@ You may pass all the attributes supported by the [Player API](https://www.sounds
 
 ## TODO
 
-* Handle events
+* Handle events with [angular-post-message](https://github.com/kylewelsby/angular-post-message)
 
 ## License
 
