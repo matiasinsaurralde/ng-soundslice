@@ -1,5 +1,5 @@
 angular.module( 'soundslice', [] ).
-  directive( 'score', function($window) {
+  directive( 'score', function($window, $rootScope) {
     return {
       scope: {
         options: '=',
@@ -7,10 +7,9 @@ angular.module( 'soundslice', [] ).
       },
       link: function( scope, element, attrs ) {
 
-        console.log(1)
-
         $window.addEventListener('message', function(event) {
-          console.log(event);
+          event = JSON.parse(event.data)
+          $rootScope.$emit( 'soundsliceEvent', event )
         })
 /*
           notation options:
