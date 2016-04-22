@@ -8,8 +8,9 @@
   <body>
     <div ng-controller="scoreController as score">
       <p>score 1:</p>
+      <p>{{ score.id }}</p>
       <p>
-        <score id="{{ score.id }}" show_staff="0" play_type="3" fretboard="1"></score>
+        <score id="score.id" show_staff="0" play_type="3" fretboard="1"></score>
       </p>
 <!--
       <p>score 2:</p>

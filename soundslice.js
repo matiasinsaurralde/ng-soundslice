@@ -1,10 +1,16 @@
 angular.module( 'soundslice', [] ).
   directive( 'score', function($window) {
     return {
+      scope: {
+        options: '=',
+        id: '='
+      },
       link: function( scope, element, attrs ) {
+
+        console.log(1)
+
         $window.addEventListener('message', function(event) {
-          console.log( 'message' );
-          console.log( event );
+          console.log(event);
         })
 /*
           notation options:
@@ -55,7 +61,7 @@ angular.module( 'soundslice', [] ).
           // always enable API
           attrs_body += '&api=1';
 
-          var html = '<iframe id="soundslice-score" src="https://www.soundslice.com/scores/' + attrs.id + '/embed/?' + attrs_body + '" width="100%" height="500" frameBorder="0" allowfullscreen></iframe>';
+          var html = '<iframe id="soundslice-score" src="https://www.soundslice.com/scores/' + scope.id + '/embed/?' + attrs_body + '" width="100%" height="500" frameBorder="0" allowfullscreen></iframe>';
           element.html( html );
         });
 
