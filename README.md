@@ -9,17 +9,24 @@ This is part of [Guru De La Guitarra](http://www.gurudelaguitarra.com/).
 
 This module provides a directive that looks like this:
 
-```
-<score id="{{ score.id }}" show_staff="0" play_type="3" fretboard="1"></score>
+``` html
+<score id="score.id" show_staff="0" play_type="3" fretboard="1"></score>
 
 <score id="1001" show_staff="0" play_type="3" fretboard="1"></score>
 ```
 
+## Instructions
+
+In scoreController you're reciving the [Player Events](https://www.soundslice.com/help/player-api/#events) from the [Javascript API of Soundslice](https://www.soundslice.com/help/player-api/)
+
+``` javascript
+$rootScope.$on( 'soundsliceEvent', function( e, ssEvent ) {
+  console.log( 'Receiving event', ssEvent )
+  console.log( ssEvent.method );
+})
+```
+
 You may pass all the attributes supported by the [Player API](https://www.soundslice.com/help/player-api/).
-
-## TODO
-
-* Handle events with [angular-post-message](https://github.com/kylewelsby/angular-post-message)
 
 ## License
 
