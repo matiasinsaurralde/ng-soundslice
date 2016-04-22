@@ -1,7 +1,11 @@
-angular.module( 'soundslice', []).
-  directive( 'score', function() {
+angular.module( 'soundslice', [] ).
+  directive( 'score', function($window) {
     return {
       link: function( scope, element, attrs ) {
+        $window.addEventListener('message', function(event) {
+          console.log( 'message' );
+          console.log( event );
+        })
 /*
           notation options:
            show_tab = 0
