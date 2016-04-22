@@ -21,7 +21,8 @@ In scoreController you're reciving the [Player Events](https://www.soundslice.co
 
 ``` javascript
 $rootScope.$on( 'soundsliceEvent', function( e, ssEvent ) {
-  console.log( 'Receiving event', ssEvent )
+  console.log( 'Receiving event', ssEvent );
+  // Player Events
   console.log( ssEvent.method );
 })
 ```
