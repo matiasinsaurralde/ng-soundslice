@@ -48,6 +48,9 @@ angular.module( 'soundslice', []).
 
           attrs_body = attrs_body.slice( 1, attrs_body.length );
 
+          // always enable API
+          attrs_body += '&api=1';
+
           var html = '<iframe id="soundslice-score" src="https://www.soundslice.com/scores/' + attrs.id + '/embed/?' + attrs_body + '" width="100%" height="500" frameBorder="0" allowfullscreen></iframe>';
           element.html( html );
         });
