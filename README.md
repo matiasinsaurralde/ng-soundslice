@@ -7,6 +7,8 @@ This is part of [Guru De La Guitarra](http://www.gurudelaguitarra.com/).
 
 ## Usage
 
+### Directive
+
 This module provides a directive that looks like this:
 
 ``` html
@@ -15,9 +17,11 @@ This module provides a directive that looks like this:
 <score id="1001" show_staff="0" play_type="3" fretboard="1"></score>
 ```
 
-## Instructions
+You may pass all the attributes supported by the [Player API](https://www.soundslice.com/help/player-api/).
 
-In scoreController you're reciving the [Player Events](https://www.soundslice.com/help/player-api/#events) from the [Javascript API of Soundslice](https://www.soundslice.com/help/player-api/)
+### Events
+
+You may listen for ```soundsliceEvent``` in ```$rootScope```, these events are described in the [documentation](https://www.soundslice.com/help/player-api/#events).
 
 ``` javascript
 $rootScope.$on( 'soundsliceEvent', function( e, ssEvent ) {
@@ -26,8 +30,6 @@ $rootScope.$on( 'soundsliceEvent', function( e, ssEvent ) {
   console.log( ssEvent.method );
 })
 ```
-
-You may pass all the attributes supported by the [Player API](https://www.soundslice.com/help/player-api/).
 
 ## License
 
