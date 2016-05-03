@@ -8,8 +8,10 @@ angular.module( 'soundslice', [] ).
       link: function( scope, element, attrs ) {
 
         $window.addEventListener('message', function(event) {
-          event = JSON.parse(event.data)
-          $rootScope.$emit( 'soundsliceEvent', event )
+          if (event.origin === "https://www.soundslice.com") {
+              event = JSON.parse(event.data);
+              $rootScope.$emit( 'soundsliceEvent', event );
+          }
         })
 /*
           notation options:
