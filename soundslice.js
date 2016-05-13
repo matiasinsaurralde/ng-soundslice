@@ -9,7 +9,6 @@ angular.module( 'soundslice', [] ).
 
         $window.addEventListener('message', function(event) {
           if (event.origin === "https://www.soundslice.com") {
-              event = JSON.parse(event.data);
               $rootScope.$emit( 'soundsliceEvent', event );
           }
         })
