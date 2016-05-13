@@ -5,9 +5,13 @@ angular.module( 'musicApp', [ 'soundslice' ] )
     self.id = 12802;
 
     $rootScope.$on( 'soundsliceEvent', function( e, ssEvent ) {
-      console.log( 'Receiving event', ssEvent )
+      console.log( 'Receiving event', ssEvent );
       // Player Events
-      console.log( ssEvent.method );
+      var data = JSON.parse(ssEvent.data);
+      var timeStamp = ssEvent.timeStamp;
+      console.log(data.method);
+      console.log(timeStamp);
+      
     })
     
   });
